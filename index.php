@@ -58,8 +58,8 @@ $english_names = [
       <div class="col-md-4">
         <div class="card h-100 shadow">
           <div class="p-3 bg-secondary bg-opacity-10 text-center rounded-top">
-            <i class="bi bi-box-seam text-neon" style="font-size: 4rem;"></i>
-            </div>
+            <img src="img/<?php echo $product['image']; ?>" class="card-img-top p-2" alt="<?php echo htmlspecialchars($part_title); ?>" style="height:200px; object-fit:contain;">
+          </div>
           <div class="card-body d-flex flex-column">
             <h5 class="card-title fw-bold"><?php echo htmlspecialchars($part_title); ?></h5>
             <p class="card-text fw-bold text-neon fs-4 mt-2">
