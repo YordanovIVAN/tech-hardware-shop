@@ -1,0 +1,26 @@
+ services:
+  web:
+    build: .
+    container_name: ivan_yordanov_tech_shop_app
+    ports:
+      - "8084:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_ivan_yordanov_tech_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: techsecretpass2026
+      MYSQL_DATABASE: tech_shop
+    ports:
+      - "3310:3306"
+    volumes:
+      - tech_shop_data:/var/lib/mysql
+      - ./my_shop.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  tech_shop_data:
