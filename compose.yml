@@ -1,4 +1,4 @@
- services:
+services:
   web:
     build: .
     container_name: ivan_yordanov_tech_shop_app
